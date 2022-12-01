@@ -6,9 +6,9 @@ class math_tasks:
 
     def task1(self, calculation_number: int):
         task1_tasknumber = random.randint(0, 9)
-        task1_tasknumber_multiplication = random.randint(0, 4)
-        task1_task = task1_tasknumber + calculation_number * task1_tasknumber_multiplication
-        answer = int(input(f"\n Udregn: {task1_tasknumber} + {calculation_number} * {task1_tasknumber_multiplication}: "))
+        task1_tasknumber_addition = random.randint(0, 4)
+        task1_task = task1_tasknumber + calculation_number + task1_tasknumber_addition
+        answer = int(input(f"\n Udregn: {task1_tasknumber} + {calculation_number} + {task1_tasknumber_addition}: "))
 
         if task1_task == answer:
             print(" Rigtigt svar.")
@@ -20,8 +20,8 @@ class math_tasks:
     def task2(self, substract_number):
         task2_tasknumber = random.randint(0, 9)
         task2_tasknumber_substract = random.randint(0, 4)
-        task2_task = task2_tasknumber - substract_number * task2_tasknumber_substract
-        answer = int(input(f"\n Udregn: {task2_tasknumber} - {substract_number} * {task2_tasknumber_substract}: "))
+        task2_task = task2_tasknumber - substract_number - task2_tasknumber_substract
+        answer = int(input(f"\n Udregn: {task2_tasknumber} - {substract_number} - {task2_tasknumber_substract}: "))
 
         if task2_task == answer:
             print(" Rigtigt svar.")
@@ -57,15 +57,15 @@ class math_tasks:
             return 0
 
 
-    def task5(self, substract):
+    def task5(self, division):
         task5_tasknumber = random.randint(0, 2)
-        task5_tasknumber_substract = random.randint(0, 4)
-        task5_task = task5_tasknumber - substract - task5_tasknumber_substract
-        answer = int(input(f"\n Udregn: {task5_tasknumber} - {task5_tasknumber_substract} - {substract}: "))
-
+        task5_task = task5_tasknumber / division
+        answer = int(input(f"\n Udregn: {task5_tasknumber} / {division}: "))
         if task5_task == answer:
             print(" Rigtigt svar.")
             return 1
         else:
             print(f" Forkert svar; {task5_task}")
             return 0
+
+
