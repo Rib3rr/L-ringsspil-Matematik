@@ -7,7 +7,7 @@ import random
 import time
 
 
-def rush():
+def Hurtigtest():
     global questions
     global correct
     while True:
@@ -62,14 +62,14 @@ if user_input == "X":
 elif MENU_LIST[int(user_input)-1] == "Hurtigtest (60sekunder)":
         questions = 0
         correct = 0
-        Thread(target=rush, args=()).start()
+        Thread(target=Hurtigtest, args=()).start()
         time.sleep(60)
         exit(f"\n Tiden er gået! Du fik {str(Fore.LIGHTCYAN_EX) + str(correct) + str(Fore.RESET)} ud af {str(Fore.LIGHTCYAN_EX) + str(questions) + str(Fore.RESET)} opgaver rigtigt!")
 
 elif MENU_LIST[int(user_input)-1] == "Hurtigtest (30sekunder)":
         questions = 0
         correct = 0
-        Thread(target=rush, args=()).start()
+        Thread(target=Hurtigtest, args=()).start()
         time.sleep(30)
         exit(f"\n Tiden er gået! Du fik {str(Fore.LIGHTCYAN_EX) + str(correct) + str(Fore.RESET)} ud af {str(Fore.LIGHTCYAN_EX) + str(questions) + str(Fore.RESET)} opgaver rigtigt!")
 
